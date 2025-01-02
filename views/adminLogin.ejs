@@ -5,7 +5,7 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Admin's Login</title>
     <link
       rel="stylesheet"
       href="/stylesheets/style.css" />
@@ -16,10 +16,10 @@
       id="main">
       <div class="w-full max-w-sm p-6 bg-white rounded-lg shadow-md">
         <h2 class="text-2xl font-semibold text-gray-700 text-center mb-6">
-          Login as a User
+          Login as a Admin
         </h2>
         <form
-          action="/login"
+          action="/adminLogin"
           method="POST"
           class="space-y-4">
           <div>
@@ -34,6 +34,20 @@
               name="username"
               class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
               placeholder="Enter your username"
+              required />
+          </div>
+          <div>
+            <label
+              for="ID"
+              class="block text-sm font-medium text-gray-600"
+              >ID</label
+            >
+            <input
+              type="text"
+              id="ID"
+              name="ID"
+              class="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+              placeholder="Enter your Admin's ID"
               required />
           </div>
           <div>
@@ -60,16 +74,16 @@
         <p class="mt-4 text-sm text-gray-500 text-center">
           Don't have an account?
           <a
-            href="/reg"
+            href="/adminReg"
             class="text-indigo-500 hover:underline"
-            >Sign Up</a
+            >Sign Up as Admin</a
           >
         </p>
         <p class="mt-4 text-sm text-gray-500 text-center">
           <a
-            href="/adminLogin"
+            href="/login"
             class="text-indigo-500 hover:underline"
-            >Login as a Admin</a
+            >Login as a User</a
           >
         </p>
       </div>
