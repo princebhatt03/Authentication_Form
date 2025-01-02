@@ -3,13 +3,10 @@ const Register = require('../models/reg');
 const AdminRegister = require('../models/adReg');
 const session = require('express-session');
 const router = express.Router();
-require('dotenv').config();
-
-const KEY = process.env.SESSION_SECRET_KEY;
 
 router.use(
   session({
-    secret: KEY,
+    secret: 'SECRET',
     resave: false,
     saveUninitialized: false,
     cookie: { secure: false, maxAge: 3600000 },
